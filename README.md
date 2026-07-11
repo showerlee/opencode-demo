@@ -21,7 +21,7 @@ curl -fsSL https://opencode.ai/install | bash
 opencode --version
 ```
 
-### 1.Init your workspace
+### 2.Init your workspace
 
 Create a `opencode-demo` dir as your opencode workspace
 
@@ -30,7 +30,7 @@ mkdir -p /Users/xxx/Desktop/opencode/repo/opencode-demo
 cd /Users/xxx/Desktop/opencode/repo/opencode-demo
 ```
 
-### 2.Set custom provider in workspace
+### 3.Set custom provider in workspace
 
 Create an opencode provider config `opencode.json` in your workspace
 
@@ -63,7 +63,7 @@ vi opencode.json
 
 The configuration is stored in [opencode.json](opencode.json). It defines a provider named `plus7` and includes example models such as `deepseek-chat`, `deepseek-reasoner`, and `deepseek-r1`
 
-### 3.Add credentials interactively
+### 4.Add credentials interactively
 
 Make sure your provider credentials are available in your environment before running requests.
 
@@ -76,7 +76,7 @@ Then follow the prompts:
 2. Enter Provider ID: `plus7`
 3. Paste your `plus7` API key
 
-### 4.Launch OpenCode with the Plus7 model
+### 5.Launch OpenCode with the Plus7 model
 
 Launch opencode with provider model `plus7/deepseek-chat` and you're ready to go.
 
@@ -93,7 +93,7 @@ More model options for `plus7`
   - plus7/deepseek-reasoner 
   - plus7/deepseek-r1
 
-### 5.Verify credentials
+### 6.Verify credentials
 
 ```bash
 opencode auth list
@@ -106,7 +106,7 @@ opencode auth list
 
 You should see `plus7` listed under credentials.
 
-### 6.Test the API endpoint directly
+### 7.Test the API endpoint directly
 
 ```bash
 curl https://tbnx.plus7.plus/v1/models -H "Authorization: Bearer YOUR_API_KEY"
