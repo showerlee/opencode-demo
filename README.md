@@ -33,36 +33,43 @@ cd /Users/xxx/Desktop/opencode/repo/opencode-demo
 
 ### 3. Set custom provider in workspace
 
-Create an opencode provider config `opencode.json` in your workspace
+- Create an opencode provider config `opencode.json` in your workspace
 
-```bash
-vi opencode.json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "plus7": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "plus7",
-      "options": {
-        "baseURL": "https://tbnx.plus7.plus/v1"
-      },
-      "models": {
-        "deepseek-chat": {
-          "name": "deepseek-chat"
+  ```bash
+  vi opencode.json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+      "plus7": {
+        "npm": "@ai-sdk/openai-compatible",
+        "name": "plus7",
+        "options": {
+          "baseURL": "https://tbnx.plus7.plus/v1"
         },
-        "deepseek-reasoner": {
-          "name": "deepseek-reasoner"
-        },
-        "deepseek-r1": {
-          "name": "deepseek-r1"
+        "models": {
+          "deepseek-chat": {
+            "name": "deepseek-chat"
+          },
+          "deepseek-reasoner": {
+            "name": "deepseek-reasoner"
+          },
+          "deepseek-r1": {
+            "name": "deepseek-r1"
+          }
         }
       }
     }
   }
-}
-```
+  ```
+  The configuration is stored in [opencode.json](opencode.json). It defines a provider named `plus7` and includes example models such as `deepseek-chat`, `deepseek-reasoner`, and `deepseek-r1`
 
-The configuration is stored in [opencode.json](opencode.json). It defines a provider named `plus7` and includes example models such as `deepseek-chat`, `deepseek-reasoner`, and `deepseek-r1`
+- Set OPENCODE_CONFIG to your default env setting
+
+  ```bash
+  echo "export OPENCODE_CONFIG=~/Desktop/opencode/repo/opencode-demo/opencode.json" >> ~/.zshrc
+  ```
+
+
 
 ### 4. Test the API endpoint directly
 
