@@ -19,6 +19,7 @@ curl -fsSL https://opencode.ai/install | bash
 
 # Verify the installation
 opencode --version
+1.17.18
 ```
 
 ### 2. Init your workspace
