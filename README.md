@@ -11,7 +11,7 @@ This guide walks you through configuring a custom OpenAI-compatible provider in 
 - Example provider setup for OpenCode
 - Support for multiple DeepSeek model entries
 
-### 1. Installed opencode on your MacOS CLI
+### 1. Install opencode on your MacOS CLI
 
 ```
 # Install latest opencode
