@@ -1,48 +1,115 @@
 # opencode-demo
 
-This repository is a minimal demo for using OpenCode with a custom provider configuration.
+This repo aims to help to learn anything in OpenCode.
 
-## Overview
+## Custom Provider Setup Guide
+This guide walks you through configuring a custom OpenAI-compatible provider in OpenCode.
 
-The project includes a sample OpenCode configuration file that connects to a custom OpenAI-compatible endpoint defined in [opencode.json](opencode.json).
-
-## Features
+### Features
 
 - Simple project structure for quick testing
 - Example provider setup for OpenCode
 - Support for multiple DeepSeek model entries
 
-## Native OpenCode Installation
+### 1.Installed opencode on your MacOS CLI
 
-### macOS / Linux
-
-Install OpenCode with the official installer:
-
-```bash
+```
+# Install latest opencode
 curl -fsSL https://opencode.ai/install | bash
-```
 
-Verify the installation:
-
-```bash
+# Verify the installation
 opencode --version
+
 ```
 
-### Quick Start
+### 1.Init your workspace
 
-1. Install OpenCode using the command above.
-2. Open this project folder in your terminal.
-3. Start OpenCode:
+Create a `opencode-demo` dir as your opencode workspace
+
+```
+mkdir -p /Users/xxx/Desktop/opencode/repo/opencode-demo
+cd /Users/xxx/Desktop/opencode/repo/opencode-demo
+```
+
+### 2.Set custom provider in workspace
+
+Create an opencode provier config `opencode.json` in your workspace
+
+```json
+cat opencode.json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "plus7": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "plus7",
+      "options": {
+        "baseURL": "https://tbnx.plus7.plus/v1"
+      },
+      "models": {
+        "deepseek-chat": {
+          "name": "deepseek-chat"
+        },
+        "deepseek-reasoner": {
+          "name": "deepseek-reasoner"
+        },
+        "deepseek-r1": {
+          "name": "deepseek-r1"
+        }
+      }
+    }
+  }
+}
+```
+
+The configuration is stored in [opencode.json](opencode.json). It defines a provider named `plus7` and includes example models such as `deepseek-chat`, `deepseek-reasoner`, and `deepseek-r1`
+
+### 2: Add credentials interactively
+
+Make sure your provider credentials are available in your environment before running requests.
 
 ```bash
-opencode
+opencode auth login
 ```
 
-4. Make sure your provider credentials are available in your environment before running requests.
+Then follow the prompts:
+1. Scroll down and select **Other**
+2. Enter Provider ID: `plus7`
+3. Paste your Plus7 API key
 
-## Configuration
+### 3.Launch OpenCode with the Plus7 model
 
-The configuration is stored in [opencode.json](opencode.json). It defines a provider named `plus7` and includes example models such as `deepseek-chat`, `deepseek-reasoner`, and `deepseek-r1`.
+Launch opencode with provider model `plus7/deepseek-chat` and you're ready to go.
+
+```bash
+opencode -m plus7/deepseek-chat
+
+# Non-interactive run mode
+opencode run -m plus7/deepseek-chat "Write a quicksort implementation in Python"
+```
+
+More model options for `plus7`
+  - plus7/deepseek-reasoner 
+  - plus7/deepseek-r1
+
+### 3: Verify credentials
+
+```bash
+opencode auth list
+┌  Credentials ~/.local/share/opencode/auth.json
+│
+●  plus7 api
+│
+└  1 credentials
+```
+
+You should see `plus7` listed under credentials.
+
+### Test the API endpoint directly
+
+```bash
+curl https://tbnx.plus7.plus/v1/models -H "Authorization: Bearer YOUR_API_KEY"
+```
 
 ## Notes
 
