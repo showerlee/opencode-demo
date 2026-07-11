@@ -32,10 +32,10 @@ cd /Users/xxx/Desktop/opencode/repo/opencode-demo
 
 ### 2.Set custom provider in workspace
 
-Create an opencode provier config `opencode.json` in your workspace
+Create an opencode provider config `opencode.json` in your workspace
 
 ```bash
-cat opencode.json
+vi opencode.json
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
