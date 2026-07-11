@@ -81,6 +81,7 @@ Then follow the prompts:
 Launch opencode with provider model `plus7/deepseek-chat` and you're ready to go.
 
 ```bash
+# Lanch opencode in CLI mode
 opencode -m plus7/deepseek-chat
 
 # Non-interactive run mode
