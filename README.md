@@ -74,7 +74,7 @@ opencode auth login
 Then follow the prompts:
 1. Scroll down and select **Other**
 2. Enter Provider ID: `plus7`
-3. Paste your Plus7 API key
+3. Paste your `plus7` API key
 
 ### 3.Launch OpenCode with the Plus7 model
 
@@ -88,6 +88,7 @@ opencode run -m plus7/deepseek-chat "Write a quicksort implementation in Python"
 ```
 
 More model options for `plus7`
+  - plus7/deepseek-chat
   - plus7/deepseek-reasoner 
   - plus7/deepseek-r1
 
