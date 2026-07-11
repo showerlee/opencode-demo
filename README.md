@@ -19,7 +19,6 @@ curl -fsSL https://opencode.ai/install | bash
 
 # Verify the installation
 opencode --version
-
 ```
 
 ### 1.Init your workspace
@@ -35,7 +34,7 @@ cd /Users/xxx/Desktop/opencode/repo/opencode-demo
 
 Create an opencode provier config `opencode.json` in your workspace
 
-```json
+```bash
 cat opencode.json
 {
   "$schema": "https://opencode.ai/config.json",
