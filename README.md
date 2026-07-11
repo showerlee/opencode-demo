@@ -112,6 +112,8 @@ You should see `plus7` listed under credentials.
 curl https://tbnx.plus7.plus/v1/models -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
-## Notes
+## Documentation
 
-This demo is intentionally simple and designed as a starting point for experimenting with OpenCode in a local project.
+- https://opencode.ai/docs/cli/
+- https://opencode.ai/docs/providers/#custom-provider
+- https://my.feishu.cn/docx/V1nPdJM8MowfeZxyIt6chSpMnYc
