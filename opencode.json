@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "plus7": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "plus7",
+      "options": {
+        "baseURL": "https://tbnx.plus7.plus/v1"
+      },
+      "models": {
+        "deepseek-chat": {
+          "name": "deepseek-chat"
+        },
+        "deepseek-reasoner": {
+          "name": "deepseek-reasoner"
+        },
+        "deepseek-r1": {
+          "name": "deepseek-r1"
+        }
+      }
+    }
+  }
+}
