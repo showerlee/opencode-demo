@@ -63,7 +63,7 @@ vi opencode.json
 
 The configuration is stored in [opencode.json](opencode.json). It defines a provider named `plus7` and includes example models such as `deepseek-chat`, `deepseek-reasoner`, and `deepseek-r1`
 
-### 2: Add credentials interactively
+### 3.Add credentials interactively
 
 Make sure your provider credentials are available in your environment before running requests.
 
@@ -76,7 +76,7 @@ Then follow the prompts:
 2. Enter Provider ID: `plus7`
 3. Paste your `plus7` API key
 
-### 3.Launch OpenCode with the Plus7 model
+### 4.Launch OpenCode with the Plus7 model
 
 Launch opencode with provider model `plus7/deepseek-chat` and you're ready to go.
 
@@ -93,7 +93,7 @@ More model options for `plus7`
   - plus7/deepseek-reasoner 
   - plus7/deepseek-r1
 
-### 3: Verify credentials
+### 5.Verify credentials
 
 ```bash
 opencode auth list
@@ -106,7 +106,7 @@ opencode auth list
 
 You should see `plus7` listed under credentials.
 
-### Test the API endpoint directly
+### 6.Test the API endpoint directly
 
 ```bash
 curl https://tbnx.plus7.plus/v1/models -H "Authorization: Bearer YOUR_API_KEY"
