@@ -87,6 +87,8 @@ Then follow the prompts:
 
 ### 6. Verify credentials
 
+You should see `plus7` listed under credentials.
+
 ```bash
 opencode auth list
 ┌  Credentials ~/.local/share/opencode/auth.json
@@ -106,8 +108,6 @@ The auth.json should something like this:
   }
 }
 ```
-
-You should see `plus7` listed under credentials.
 
 ### 7. Launch OpenCode with the Plus7 model
 
