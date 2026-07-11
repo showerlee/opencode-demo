@@ -69,8 +69,6 @@ cd /Users/xxx/Desktop/opencode/repo/opencode-demo
   echo "export OPENCODE_CONFIG=~/Desktop/opencode/repo/opencode-demo/opencode.json" >> ~/.zshrc
   ```
 
-
-
 ### 4. Test the API endpoint directly
 
 ```bash
